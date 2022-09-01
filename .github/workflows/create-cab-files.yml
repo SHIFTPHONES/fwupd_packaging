@@ -1,0 +1,43 @@
+name: create-cab-files
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Install requirements
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y curl gawk gcab
+
+      - name: Run build script
+        run: bash generate-cab-files.sh
+
+      - name : Upload artifacts
+        uses: actions/upload-artifact@master
+        with:
+          name: axolotl-cab-files
+          path: |
+            ${{ github.workspace }}/abl*.cab
+            ${{ github.workspace }}/abl*.xml
+
+  upload:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download all built artifacts
+        uses: actions/download-artifact@v2
+
+      - name: Release to the pushed tag.
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            ${{ github.workspace }}/axolotl-cab-files/abl*.cab
+            ${{ github.workspace }}/axolotl-cab-files/abl*.xml
+          fail_on_unmatched_files: true
