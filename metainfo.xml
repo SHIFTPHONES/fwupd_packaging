@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2021-2022 Dylan Van Assche <me@dylanvanassche.be> -->
+<component type="firmware">
+  <id>eco.shift.shift6mq.abl.firmware</id>
+  <name>SHIFT6mq</name>
+  <name_variant_suffix>ABL bootloader</name_variant_suffix>
+  <summary>Firmware for the SHIFT SHIFT6mq's ABL bootloader</summary>
+  <description>
+    <p>
+      Updating your bootloader may bring new features, security fixes, and other improvements. Upgrading at your own risk!
+    </p>
+  </description>
+  <categories>
+    <category>X-Device</category>
+    <category>X-System</category>
+  </categories>
+  <provides>
+    <!-- Match the SHIFT6mq partitions -->
+    <!-- ABL A -->
+    <firmware type="flashed">a1ea18c7-9f12-5ff0-8887-7d81f92ec261</firmware>
+    <!-- ABL B -->
+    <firmware type="flashed">f7d6bfca-1640-5666-977c-84231b74f18f</firmware>
+  </provides>
+  <url type="homepage">https://shift.eco/</url>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>proprietary</project_license>
+  <releases>
+    <release urgency="high" version="SCRIPT_MARKER_VERSION" date="SCRIPT_MARKER_DATE" install_duration="120">
+      <checksum type="sha1" filename="SCRIPT_MARKER_FILENAME" target="content">SCRIPT_MARKER_SHA1</checksum>
+      <checksum type="sha256" filename="SCRIPT_MARKER_FILENAME" target="content">SCRIPT_MARKER_SHA256</checksum>
+      <url type="source">https://github.com/SHIFTPHONES/android_bootable_bootloader_edk2</url>
+      <description>
+        <!-- Fill me out, please -->
+      </description>
+      <issues>
+      </issues>
+    </release>
+  </releases>
+  <!-- Required versions of fwupd, firmware, etc. -->
+  <requires>
+    <id compare="ge" version="1.8.5">org.freedesktop.fwupd</id>
+  </requires>
+  <!-- Custom firmware flashing methods and quirks -->
+  <custom>
+    <value key="LVFS::UpdateProtocol">be.dylanvanassche.android_boot</value>
+  </custom>
+  <!-- Search keywords -->
+  <keywords>
+    <keyword>shiftphones</keyword>
+    <keyword>shift6mq</keyword>
+    <keyword>bootloader</keyword>
+    <keyword>axolotl</keyword>
+    <keyword>abl</keyword>
+  </keywords>
+</component>
