@@ -30,7 +30,10 @@
       <checksum type="sha256" filename="SCRIPT_MARKER_FILENAME" target="content">SCRIPT_MARKER_SHA256</checksum>
       <url type="source">https://github.com/SHIFTPHONES/android_bootable_bootloader_edk2</url>
       <description>
-        <!-- Fill me out, please -->
+        <p>Improvements:</p>
+        <ul>
+          <li>Report ABL version through cmdline</li>
+        </ul>
       </description>
       <issues>
       </issues>
