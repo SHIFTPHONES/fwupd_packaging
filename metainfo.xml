@@ -42,7 +42,7 @@ SCRIPT_MARKER_DESCRIPTION
   </requires>
   <!-- Custom firmware flashing methods and quirks -->
   <custom>
-    <value key="LVFS::UpdateProtocol">be.dylanvanassche.android_boot</value>
+    <value key="LVFS::UpdateProtocol">com.google.android_boot</value>
   </custom>
   <!-- Search keywords -->
   <keywords>
