@@ -13,9 +13,8 @@ sudo fwupmgr upgrade
 ## Preparing for a new release
 
 1) Open `generate-cab-files` and edit the entries contained within `Image information (edit this)`
-2) Open `metainfo.xml` and update the `description` section
-3) Run the cab generation script
-4) Manually verify the output is correct and do QA
+2) Run the cab generation script
+3) Manually verify the output is correct and do QA
 
 ## Generating CAB files
 
