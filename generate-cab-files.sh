@@ -47,13 +47,13 @@ SHA256=($(sha256sum "${OUTPUT_DIRECTORY}/${OUTPUT_IMAGE_FILE}"))
 
 # Generate final metainfo file
 awk \
-    -v FILENAME="${IMAGE_NAME}.img" \
+    -v IMAGE_FILE="${OUTPUT_IMAGE_FILE}" \
     -v VERSION="${IMAGE_VERSION}" \
     -v DATE="${IMAGE_DATE}" \
     -v SHA1="${SHA1}" \
     -v SHA256="${SHA256}" \
     -v DESCRIPTION="${IMAGE_DESCRIPTION}" '{
-        sub(/SCRIPT_MARKER_FILENAME/, FILENAME);
+        sub(/SCRIPT_MARKER_FILENAME/, IMAGE_FILE);
         sub(/SCRIPT_MARKER_VERSION/, VERSION);
         sub(/SCRIPT_MARKER_DATE/, DATE);
         sub(/SCRIPT_MARKER_SHA1/, SHA1);
