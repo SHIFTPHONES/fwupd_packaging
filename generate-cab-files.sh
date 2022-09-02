@@ -5,7 +5,6 @@ METAINFO_TEMPLATE="metainfo.xml"
 ###############################
 # Image information (edit this)
 IMAGE_DATE="2022-08-31"
-IMAGE_NAME="abl_20220831"
 IMAGE_URL="https://gitlab.shift-gmbh.com/ShiftOSS/android_proprietary_vendor_firmware/-/raw/047d5c8ced59a95c509d4894178999a5edbd05eb/axolotl/radio/abl.img"
 IMAGE_VERSION="3.9.20220831"
 IMAGE_DESCRIPTION=$(cat << EOF
@@ -18,6 +17,7 @@ EOF
 #
 ###############################
 
+IMAGE_NAME="abl_${IMAGE_VERSION}"
 METAINFO_FILE="${IMAGE_NAME}.${METAINFO_TEMPLATE}"
 
 # Download firmware image
