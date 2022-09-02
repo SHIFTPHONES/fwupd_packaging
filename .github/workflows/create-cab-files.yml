@@ -24,8 +24,8 @@ jobs:
         with:
           name: axolotl-cab-files
           path: |
-            ${{ github.workspace }}/abl*.cab
-            ${{ github.workspace }}/abl*.xml
+            ${{ github.workspace }}/output/*.cab
+            ${{ github.workspace }}/output/*.xml
 
   upload:
     needs: build
@@ -38,6 +38,6 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            ${{ github.workspace }}/axolotl-cab-files/abl*.cab
-            ${{ github.workspace }}/axolotl-cab-files/abl*.xml
+            ${{ github.workspace }}/axolotl-cab-files/*.cab
+            ${{ github.workspace }}/axolotl-cab-files/*.xml
           fail_on_unmatched_files: true

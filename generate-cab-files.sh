@@ -1,6 +1,7 @@
 #!/bin/bash
 
 METAINFO_TEMPLATE="metainfo.xml"
+OUTPUT_DIRECTORY="output"
 
 ###############################
 # Image information (edit this)
@@ -20,12 +21,16 @@ EOF
 IMAGE_NAME="abl_${IMAGE_VERSION}"
 METAINFO_FILE="${IMAGE_NAME}.${METAINFO_TEMPLATE}"
 
+# Clean output directory
+rm -rf "${OUTPUT_DIRECTORY}"
+mkdir -p "${OUTPUT_DIRECTORY}"
+
 # Download firmware image
-curl -o "${IMAGE_NAME}.img" "${IMAGE_URL}"
+curl -o "${OUTPUT_DIRECTORY}/${IMAGE_NAME}.img" "${IMAGE_URL}"
 
 # Generate checksums
-SHA1=($(sha1sum "${IMAGE_NAME}.img"))
-SHA256=($(sha256sum "${IMAGE_NAME}.img"))
+SHA1=($(sha1sum "${OUTPUT_DIRECTORY}/${IMAGE_NAME}.img"))
+SHA256=($(sha256sum "${OUTPUT_DIRECTORY}/${IMAGE_NAME}.img"))
 
 # Generate final metainfo file
 awk \
@@ -42,9 +47,9 @@ awk \
         sub(/SCRIPT_MARKER_SHA256/, SHA256);
         sub(/SCRIPT_MARKER_DESCRIPTION/, DESCRIPTION);
         print;
-    }' "${METAINFO_TEMPLATE}" > "${METAINFO_FILE}"
+    }' "${METAINFO_TEMPLATE}" > "${OUTPUT_DIRECTORY}/${METAINFO_FILE}"
 
 gcab --create \
-    "${IMAGE_NAME}.cab" \
-    "${IMAGE_NAME}.img" \
-    "${IMAGE_NAME}.${METAINFO_TEMPLATE}"
+    "${OUTPUT_DIRECTORY}/${IMAGE_NAME}.cab" \
+    "${OUTPUT_DIRECTORY}/${IMAGE_NAME}.img" \
+    "${OUTPUT_DIRECTORY}/${IMAGE_NAME}.${METAINFO_TEMPLATE}"

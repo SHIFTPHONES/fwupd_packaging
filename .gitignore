@@ -1,3 +1,2 @@
-# ignore output files
-*.cab
-*.img
+# ignore output directory
+/output/
