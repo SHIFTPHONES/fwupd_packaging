@@ -9,7 +9,7 @@ IMAGE_DATE="2022-08-31"
 IMAGE_URL="https://gitlab.shift-gmbh.com/ShiftOSS/android_proprietary_vendor_firmware/-/raw/047d5c8ced59a95c509d4894178999a5edbd05eb/axolotl/radio/abl.img"
 IMAGE_VERSION="3.9.20220831"
 IMAGE_DESCRIPTION=$(cat << EOF
-<p>Improvements:</p>
+<p>This release brings the following fixes and improvements:</p>
 <ul>
   <li>Report ABL version through cmdline</li>
 </ul>
