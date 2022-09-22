@@ -43,6 +43,8 @@ SCRIPT_MARKER_DESCRIPTION
   <!-- Custom firmware flashing methods and quirks -->
   <custom>
     <value key="LVFS::UpdateProtocol">com.google.android_boot</value>
+    <value key="LVFS::VersionFormat">triplet</value>
+    <value key="LVFS::DeviceIntegrity">signed</value>
   </custom>
   <!-- Search keywords -->
   <keywords>
