@@ -1,8 +1,5 @@
 name: create-cab-files
-on:
-  push:
-    tags:
-      - "*"
+on: [push]
 
 jobs:
   build:
@@ -28,6 +25,7 @@ jobs:
             ${{ github.workspace }}/output/*.xml
 
   upload:
+    if: github.ref_type == 'tag'
     needs: build
     runs-on: ubuntu-latest
     steps:
