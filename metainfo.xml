@@ -3,8 +3,8 @@
 <component type="firmware">
   <id>eco.shift.axolotl.abl.firmware</id>
   <name>6mq</name>
-  <name_variant_suffix>ABL bootloader</name_variant_suffix>
-  <summary>Firmware for SHIFT 6mq's ABL bootloader</summary>
+  <name_variant_suffix>Bootloader</name_variant_suffix>
+  <summary>Firmware for SHIFT 6mq's bootloader</summary>
   <description>
     <p>
       Updating your bootloader may bring new features, security fixes, and other improvements. Upgrading at your own risk!
