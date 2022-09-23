@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2021-2022 Dylan Van Assche <me@dylanvanassche.be> -->
 <component type="firmware">
-  <id>eco.shift.shift6mq.abl.firmware</id>
-  <name>SHIFT6mq</name>
+  <id>eco.shift.axolotl.abl.firmware</id>
+  <name>6mq</name>
   <name_variant_suffix>ABL bootloader</name_variant_suffix>
-  <summary>Firmware for the SHIFT SHIFT6mq's ABL bootloader</summary>
+  <summary>Firmware for SHIFT 6mq's ABL bootloader</summary>
   <description>
     <p>
       Updating your bootloader may bring new features, security fixes, and other improvements. Upgrading at your own risk!
@@ -15,7 +15,7 @@
     <category>X-System</category>
   </categories>
   <provides>
-    <!-- Match the SHIFT6mq partitions -->
+    <!-- Match axolotl's partitions -->
     <!-- ABL A -->
     <firmware type="flashed">a1ea18c7-9f12-5ff0-8887-7d81f92ec261</firmware>
     <!-- ABL B -->
