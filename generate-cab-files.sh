@@ -43,8 +43,8 @@ mkdir -p "${OUTPUT_DIRECTORY}"
 curl --silent --output "${OUTPUT_DIRECTORY}/${OUTPUT_IMAGE_FILE}" "${IMAGE_URL}"
 
 # Generate checksums
-SHA1=($(sha1sum "${OUTPUT_DIRECTORY}/${OUTPUT_IMAGE_FILE}"))
-SHA256=($(sha256sum "${OUTPUT_DIRECTORY}/${OUTPUT_IMAGE_FILE}"))
+SHA1=$(sha1sum "${OUTPUT_DIRECTORY}/${OUTPUT_IMAGE_FILE}" | awk -F' ' '{print $1}')
+SHA256=$(sha256sum "${OUTPUT_DIRECTORY}/${OUTPUT_IMAGE_FILE}" | awk -F' ' '{print $1}')
 
 # Generate final metainfo file
 awk \
