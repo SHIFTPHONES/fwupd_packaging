@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 METAINFO_TEMPLATE="metainfo.xml"
 OUTPUT_DIRECTORY="output"
