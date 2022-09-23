@@ -66,12 +66,13 @@ awk \
 echo "[+] Generating '${OUTPUT_DIRECTORY}/${OUTPUT_GCAB_FILE}' using:"
 echo "[+]   - image:    ${OUTPUT_DIRECTORY}/${OUTPUT_IMAGE_FILE}"
 echo "[+]   - metainfo: ${OUTPUT_DIRECTORY}/${OUTPUT_METAINFO_FILE}"
-cd "${OUTPUT_DIRECTORY}"
-gcab --create \
-    "${OUTPUT_GCAB_FILE}" \
-    "${OUTPUT_IMAGE_FILE}" \
-    "${OUTPUT_METAINFO_FILE}"
-cd ..
+(
+    cd "${OUTPUT_DIRECTORY}" || echo "Error: directory does not exist: ${OUTPUT_DIRECTORY}" || exit
+    gcab --create \
+        "${OUTPUT_GCAB_FILE}" \
+        "${OUTPUT_IMAGE_FILE}" \
+        "${OUTPUT_METAINFO_FILE}"
+)
 echo ""
 
 echo "Done, have a nice day!"
