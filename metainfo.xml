@@ -19,7 +19,7 @@
     <!-- ABL A -->
     <firmware type="flashed">a1ea18c7-9f12-5ff0-8887-7d81f92ec261</firmware>
     <!-- ABL B -->
-    <firmware type="flashed">f7d6bfca-1640-5666-977c-84231b74f18f</firmware>
+    <firmware type="flashed">9adc34d6-c729-51de-98ca-9066fcf85630</firmware>
   </provides>
   <url type="homepage">https://shift.eco/</url>
   <metadata_license>CC0-1.0</metadata_license>
