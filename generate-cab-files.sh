@@ -5,6 +5,7 @@ OUTPUT_DIRECTORY="output"
 
 ###############################
 # Image information (edit this)
+IMAGE_URGENCY="high"
 IMAGE_DATE="2022-10-06"
 IMAGE_URL="https://gitlab.shift-gmbh.com/ShiftOSS/android_proprietary_vendor_firmware/-/raw/85d96c00f15ad30b382c7fb237ed019212549d98/axolotl/radio/abl.img"
 IMAGE_VERSION="3.9.20221006"
@@ -54,13 +55,15 @@ awk \
     -v DATE="${IMAGE_DATE}" \
     -v SHA1="${SHA1}" \
     -v SHA256="${SHA256}" \
-    -v DESCRIPTION="${IMAGE_DESCRIPTION}" '{
+    -v DESCRIPTION="${IMAGE_DESCRIPTION}" \
+    -v URGENCY="${IMAGE_URGENCY}" '{
         sub(/SCRIPT_MARKER_FILENAME/, IMAGE_FILE);
         sub(/SCRIPT_MARKER_VERSION/, VERSION);
         sub(/SCRIPT_MARKER_DATE/, DATE);
         sub(/SCRIPT_MARKER_SHA1/, SHA1);
         sub(/SCRIPT_MARKER_SHA256/, SHA256);
         sub(/SCRIPT_MARKER_DESCRIPTION/, DESCRIPTION);
+        sub(/SCRIPT_MARKER_URGENCY/, URGENCY);
         print;
     }' "${METAINFO_TEMPLATE}" > "${OUTPUT_DIRECTORY}/${OUTPUT_METAINFO_FILE}"
 

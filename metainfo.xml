@@ -25,7 +25,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>proprietary</project_license>
   <releases>
-    <release urgency="high" version="SCRIPT_MARKER_VERSION" date="SCRIPT_MARKER_DATE" install_duration="120">
+    <release urgency="SCRIPT_MARKER_URGENCY" version="SCRIPT_MARKER_VERSION" date="SCRIPT_MARKER_DATE" install_duration="120">
       <checksum type="sha1" filename="SCRIPT_MARKER_FILENAME" target="content">SCRIPT_MARKER_SHA1</checksum>
       <checksum type="sha256" filename="SCRIPT_MARKER_FILENAME" target="content">SCRIPT_MARKER_SHA256</checksum>
       <url type="source">https://github.com/SHIFTPHONES/android_bootable_bootloader_edk2</url>
