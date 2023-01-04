@@ -6,15 +6,14 @@ OUTPUT_DIRECTORY="output"
 ###############################
 # Image information (edit this)
 IMAGE_URGENCY="high"
-IMAGE_DATE="2022-10-06"
-IMAGE_URL="https://gitlab.shift-gmbh.com/ShiftOSS/android_proprietary_vendor_firmware/-/raw/85d96c00f15ad30b382c7fb237ed019212549d98/axolotl/radio/abl.img"
-IMAGE_VERSION="3.9.20221006"
+IMAGE_DATE="2022-12-24"
+IMAGE_URL="https://gitlab.shift-gmbh.com/ShiftOSS/android_proprietary_vendor_firmware/-/raw/1bb90b71d9658c74c6643429008480da12a850a8/axolotl/radio/abl.img"
+IMAGE_VERSION="5.0.20221224"
 IMAGE_DESCRIPTION=$(cat << EOF
 <p>This release brings the following fixes and improvements:</p>
 <ul>
-  <li>Add support for enabling developer mode</li>
-  <li>Correct spelling mistakes</li>
-  <li>Report ABL version through cmdline</li>
+  <li>Disable parallel download flash operations</li>
+  <li>Fix slot switching issues for vendor_boot partitions</li>
 </ul>
 EOF
 )
