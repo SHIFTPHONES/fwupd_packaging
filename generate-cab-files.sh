@@ -5,15 +5,15 @@ OUTPUT_DIRECTORY="output"
 
 ###############################
 # Image information (edit this)
+IMAGE_TARGET="otter"
 IMAGE_URGENCY="high"
-IMAGE_DATE="2022-12-24"
-IMAGE_URL="https://gitlab.shift-gmbh.com/ShiftOSS/android_proprietary_vendor_firmware/-/raw/1bb90b71d9658c74c6643429008480da12a850a8/axolotl/radio/abl.img"
-IMAGE_VERSION="5.0.20221224"
+IMAGE_DATE="2024-01-01"
+IMAGE_URL="https://gitlab.shift-gmbh.com/ShiftOSS/android_proprietary_vendor_firmware_otter/-/raw/70832c0939a25169d814e2d81c0a296a80d5c91a/radio/abl.img"
+IMAGE_VERSION="6.0.0"
 IMAGE_DESCRIPTION=$(cat << EOF
 <p>This release brings the following fixes and improvements:</p>
 <ul>
-  <li>Disable parallel download flash operations</li>
-  <li>Fix slot switching issues for vendor_boot partitions</li>
+  <li>Initial bootloader release for SHIFTphone 8 based on DVT1</li>
 </ul>
 EOF
 )
@@ -29,7 +29,7 @@ echo "${IMAGE_DESCRIPTION}"
 echo "##########################"
 echo ""
 
-IMAGE_NAME="abl_${IMAGE_VERSION}"
+IMAGE_NAME="${IMAGE_TARGET}_abl_${IMAGE_VERSION}"
 METAINFO_FILE="${IMAGE_NAME}.${METAINFO_TEMPLATE}"
 
 OUTPUT_GCAB_FILE="${IMAGE_NAME}.cab"

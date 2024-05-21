@@ -1,6 +1,6 @@
-# SHIFT6mq LVFS firmware packaging
+# LVFS firmware packaging for SHIFTphone 8 (otter)
 
-Packaging the SHIFT6mq bootloader firmware for [fwupd](https://fwupd.org) and [LVFS](https://fwupd.org/lvfs) as CAB files.<br>
+Packaging the SHIFTphone 8 (otter) bootloader firmware for [fwupd](https://fwupd.org) and [LVFS](https://fwupd.org/lvfs) as CAB files.<br>
 These CAB files are uploaded to LVFS by SHIFT for distribution.<br>
 Users can install the latest bootloader through fwupd.
 
@@ -27,4 +27,4 @@ bash generate-cab-files.sh
 See [LICENSE](./LICENSE).
 
 Copyright (c) Dylan Van Assche (2021-2022)<br>
-Copyright (c) SHIFT GmbH (2022)
+Copyright (c) SHIFT GmbH (2022-2024)

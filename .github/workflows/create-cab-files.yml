@@ -19,7 +19,7 @@ jobs:
       - name : Upload artifacts
         uses: actions/upload-artifact@master
         with:
-          name: axolotl-cab-files
+          name: otter-cab-files
           path: |
             ${{ github.workspace }}/output/*.cab
             ${{ github.workspace }}/output/*.xml
@@ -36,6 +36,6 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            ${{ github.workspace }}/axolotl-cab-files/*.cab
-            ${{ github.workspace }}/axolotl-cab-files/*.xml
+            ${{ github.workspace }}/otter-cab-files/*.cab
+            ${{ github.workspace }}/otter-cab-files/*.xml
           fail_on_unmatched_files: true
