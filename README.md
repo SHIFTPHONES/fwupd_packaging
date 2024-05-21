@@ -11,6 +11,7 @@ Please check the individual branches of the repo to access device specific code.
 ### ABL (Android Boot Loader)
 
 - [SHIFT6mq (axolotl)](https://github.com/SHIFTPHONES/fwupd_packaging/tree/axolotl/abl)
+- [SHIFTphone 8 (otter)](https://github.com/SHIFTPHONES/fwupd_packaging/tree/otter/abl)
 
 ## License
 
